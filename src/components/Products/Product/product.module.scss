@@ -1,0 +1,39 @@
+.container{
+    width: 350px;
+    margin: 20px;
+    .container_content{
+        display: flex;
+        flex-direction: column;
+        .product_card{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border: 1px solid #00000021;
+            border-top: none;
+            h5{
+                font-size: 16px;
+                line-height: 23px;
+                padding-bottom: 10px;
+            }
+            .description{
+                margin-top: 10px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+            }
+            .price{
+                margin: 22px 0px 20px 0px;
+                font-size: 16px;
+                line-height: 23px;
+                font-weight: 700;
+            }
+            .addCartButton{
+                font-size: 16px;
+                background-color: #9353FF;
+                border: none;
+                padding: 12px;
+                color: #fff;
+            }
+        }
+    }
+}

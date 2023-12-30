@@ -1,0 +1,21 @@
+.container_facility {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+    margin-right: 35px;
+    .facility_content{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h5{
+            color: #DAFF01;
+            font-size: 16px;
+        }
+        p{
+            width: 200px;
+            font-size: 13px;
+        }
+    }
+}

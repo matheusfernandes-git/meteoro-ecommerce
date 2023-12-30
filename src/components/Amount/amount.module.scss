@@ -1,0 +1,33 @@
+.container_amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    p {
+        font-size: 13px;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        .amount {
+            border: 1px solid #fff;
+            font-size: 13px;
+            padding: 4px 15px;
+            border-radius: 10%;
+        }
+
+        .amount_button {
+            border: 1px solid #fff;
+            color: #fff;
+            background: none;
+            font-size: 13px;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+        }
+    }
+}

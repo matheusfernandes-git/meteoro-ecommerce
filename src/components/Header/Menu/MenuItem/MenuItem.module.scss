@@ -1,0 +1,28 @@
+.link{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media(max-width: 768px){
+    .containerLinks{
+        margin: 14px;
+        .link:hover{
+            color: #DAFF01;
+        }
+        .link::after{
+            content: '';
+            width: 0%;
+            height: 1px;
+            background-color: #fff;
+            color: #000;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: 0.3s ease-in-out;
+        }
+    }
+    .homeLink{
+        display: none;
+    }
+}

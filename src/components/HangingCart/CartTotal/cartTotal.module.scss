@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    .amount_infos {
+        display: flex;
+        justify-content: space-between;
+        p {
+            font-size: 24px;
+            color: #DAFF01;
+        }
+    }
+    .confirm_button{
+        font-size: 16px;
+        color: #fff;
+        border: none;
+        background-color: #9353FF;
+        width: 100%;
+        padding: 8px;
+    }
+}

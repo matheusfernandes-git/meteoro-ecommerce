@@ -1,0 +1,31 @@
+.product {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: #fff;
+
+    img {
+        width: 120px;
+    }
+
+    .container_infos {
+        display: flex;
+        flex-grow: 1;
+
+        .product_infos {
+            flex-direction: column;
+            display: flex;
+            gap: 25px;
+
+            h4 {
+                color: #DAFF01;
+            }
+        }
+    }
+
+    @media(max-width: 445px){
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}

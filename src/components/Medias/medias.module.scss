@@ -1,0 +1,18 @@
+.container_medias{
+    padding: 50px;
+    color: #fff;
+    background-color: #000;
+    .container_facilities_title{
+        text-align: center;
+        font-size: 32px;
+        font-weight: 500;
+    }
+    .container_facilities{
+        display: flex;
+        justify-content: center;
+        @media(min-width: 375px) and (max-width: 1200px){
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+}

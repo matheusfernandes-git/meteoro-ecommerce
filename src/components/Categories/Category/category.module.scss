@@ -1,0 +1,13 @@
+.container{
+    margin: 20px;
+    cursor: pointer;
+    .container_content{
+        display: flex;
+        flex-direction: column;
+        .description{
+            background-color: #000;
+            color: #fff;
+            padding: 14px;
+        }
+    }
+}

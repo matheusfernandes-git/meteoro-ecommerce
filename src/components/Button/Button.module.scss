@@ -1,0 +1,11 @@
+.default_button{
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    background-color: #9353FF;
+    width: 100%;
+    padding: 10px;
+    & :hover{
+        background-color: #5d4588;
+    }
+}

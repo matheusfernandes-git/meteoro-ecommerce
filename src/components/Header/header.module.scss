@@ -1,0 +1,113 @@
+.header {
+    display: flex;
+    position: fixed;
+    z-index: 2;
+    justify-content: center;
+    width: 100%;
+    background-color: #000;
+    padding: 16px;
+
+    .container_nav {
+        display: flex;
+        align-items: center;
+        gap: 150px;
+        nav {
+            .container_links {
+                display: flex;
+                gap: 15px;
+
+                .meteoro_logo {
+                    width: 170px;
+                    margin-left: 15px;
+                }
+
+                .container_toogle_items {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    .cart_amount {
+                        position: absolute;
+                        top: 27px;
+                        margin-left: 8px;
+                        color: #DAFF01;
+                    }
+                }
+            }
+        }
+
+        .search_form {
+            display: flex;
+            align-items: center;
+
+
+            .search_container {
+                position: relative;
+                display: flex;
+                align-items: center;
+
+
+                .search_input {
+                    padding: 8px;
+                    width: 100%;
+                    font-size: 16px;
+                    margin-right: 8px;
+                }
+
+                .search_icon {
+                    cursor: pointer;
+                    position: absolute;
+                    right: 8px;
+                    background-color: #9353FF;
+                    padding: 9px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+
+        .container_nav {
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        nav {
+            padding-bottom: 20px;
+
+            .meteoro_logo {
+                width: 160px;
+            }
+
+            .container_links {
+                width: 100%;
+                gap: 20px;
+            }
+
+            .cart_icon {
+                width: 35px;
+            }
+
+            .container_toogle_items {
+                display: flex;
+                margin-left: auto;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+
+        .search_form {
+            margin: initial;
+
+            .search_input {
+                width: 225px;
+            }
+        }
+    }
+
+}
