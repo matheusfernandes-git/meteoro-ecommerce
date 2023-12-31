@@ -3,6 +3,7 @@ import DefaultPage from "./components/DefaultPage";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import { AllContextsProvider } from "./context";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<DefaultPage />}>
             <Route path="/" element={<Home />} />
             <Route path="/carrinho" element={<Cart />} />
+            <Route path="*" element={<NotFound renderCartIcon={false} />} />
           </Route>
         </Routes>
       </BrowserRouter>

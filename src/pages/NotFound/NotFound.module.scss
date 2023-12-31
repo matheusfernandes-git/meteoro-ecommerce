@@ -1,0 +1,31 @@
+.container_404{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .not_found{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        text-align: center;
+        margin: 200px 0px 100px 0px;
+        border: 1px solid black;
+        padding: 20px;
+        h1{
+            font-size: 32px;
+        }
+        p{
+            font-size: 18px;
+        }
+        .home_link{
+            background-color: #AE7EFF;
+            padding: 12px;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    @media(max-width: 768px){
+        width: 100%;
+        padding: 20px;
+    }
+}

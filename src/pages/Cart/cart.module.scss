@@ -1,5 +1,6 @@
 .cart_banner {
     img {
+        margin-top: 77px;
         width: 100%;
     }
 }
@@ -53,12 +54,24 @@
         .products {
             padding: 10px;
         }
-
+        
+        .active_scroll {
+            overflow-y: auto;
+            max-height: 825px;
+        }
     }
 
 }
 
+
 @media(max-width: 768px) {
+    .cart_banner {
+        img {
+            margin-top: 137px;
+            width: 100%;
+        }
+    }
+
     .cart_container {
         flex-direction: column;
         padding: 15px;

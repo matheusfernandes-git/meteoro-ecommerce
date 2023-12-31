@@ -1,4 +1,21 @@
-.slide_item {
-  width: 100%;
-  object-fit: cover;
+.carousel {
+  margin-top: 50px;
+
+  .slide_item {
+    width: 100%;
+  }
+
+  @media(max-width: 768px) {
+    margin-top: 130px;
+
+    .slide_item {
+      height: 180px;
+    }
+  }
+
+  @media(min-width: 769px) and (max-width: 1200px) {
+    .slide_item {
+      height: 350px;
+    }
+  }
 }

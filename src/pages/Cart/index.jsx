@@ -12,7 +12,7 @@ import { CartContext } from "../../context/CartContext";
 const Cart = () => {
   const navigate = useNavigate();
   const [completed, setCompleted] = useState(false);
-  const { setCart } = useContext(CartContext);
+  const { cart, setCart } = useContext(CartContext);
   const handleCompletedPurchase = () => {
     setCart([]);
     deleteCartFromLocalStorage();
@@ -39,7 +39,11 @@ const Cart = () => {
       ) : (
         <>
           <Title classes={styles.title}>Carrinho de Compras</Title>
-          <div className={styles.cart_container}>
+          <div
+            className={`${cart.length >= 3 && styles.active_scroll} ${
+              styles.cart_container
+            } `}
+          >
             <div className={styles.details_cart_container}>
               <Title classes={styles.details_cart_title}>
                 Detalhes da compra

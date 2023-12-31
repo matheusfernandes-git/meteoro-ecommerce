@@ -19,11 +19,11 @@ const BannerCarousel = () => {
   ];
 
   return (
-    <section className={styles.carousel}>
+    <section>
       <Swiper
         slidesPerView={1}
         pagination={{ clickable: true }}
-        navigation
+        navigation={false}
         autoplay={{ delay: 2500 }}
         style={{
           "--swiper-navigation-color": "#fff",
@@ -31,12 +31,14 @@ const BannerCarousel = () => {
         }}
       >
         {images.map((img) => (
-          <SwiperSlide key={img.id}>
-            <img
-              src={img.src}
-              alt="imagens do carrossel"
-              className={styles.slide_item}
-            />
+          <SwiperSlide className={styles.carousel} key={img.id}>
+            {
+              <img
+                src={img.src}
+                alt="imagens do carrossel"
+                className={styles.slide_item}
+              />
+            }
           </SwiperSlide>
         ))}
       </Swiper>

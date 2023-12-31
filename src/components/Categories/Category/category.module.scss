@@ -1,13 +1,22 @@
-.container{
+.container {
     margin: 20px;
     cursor: pointer;
-    .container_content{
+    transition: transform 0.7s, box-shadow 0.7s;
+
+    .container_content {
         display: flex;
         flex-direction: column;
-        .description{
+
+        .description {
             background-color: #000;
             color: #fff;
             padding: 14px;
         }
+    }
+
+    &:hover {
+        transform: scale(1) translateY(4px);
+        transition: 0.6s;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.11);
     }
 }

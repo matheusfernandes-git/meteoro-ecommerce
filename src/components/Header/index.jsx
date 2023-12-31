@@ -1,8 +1,8 @@
-import Menu from "./Menu";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import styles from "./header.module.scss";
 import { FiShoppingCart } from "react-icons/fi";
+import { RiShoppingCartFill } from "react-icons/ri";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import { HandleDisplayProductsContext } from "../../context/HandleDisplayProductsContext";
@@ -36,6 +36,8 @@ const Header = () => {
     }
   };
 
+  const isNotFound = location.pathname === "*";
+
   useEffect(() => {
     handleQuantityProductsCart();
   }, [cart]);
@@ -52,42 +54,48 @@ const Header = () => {
                 alt="Logo da loja Meteora"
               />
             </Link>
-            <div className={styles.container_toogle_items}>
-              {/* <Menu /> */}
-              {location.pathname !== "/carrinho" && (
+            {!isNotFound && (
+              <div className={styles.container_toogle_items}>
+                {/* <Menu /> */}
                 <Link className={styles.cart_icon}>
-                  <FiShoppingCart {...iconProps} onClick={handleCart} />
-                  {cart.length !== 0 && (
-                    <span className={styles.cart_amount}>
-                      {quantityCartProduct}
-                    </span>
+                  {cart.length === 0 ? (
+                    <FiShoppingCart {...iconProps} onClick={handleCart} />
+                  ) : (
+                    <>
+                      <RiShoppingCartFill {...iconProps} onClick={handleCart} />
+                      <span className={styles.cart_amount}>
+                        {quantityCartProduct}
+                      </span>
+                    </>
                   )}
                 </Link>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </nav>
-        <div className={styles.search_form}>
-          <div>
-            <form>
-              <div className={styles.search_container}>
-                <input
-                  className={styles.search_input}
-                  type="text"
-                  onChange={handleInputChange}
-                  value={search}
-                  placeholder="Digite o produto"
-                />
-                <FaSearch
-                  className={styles.search_icon}
-                  onClick={searchProduct}
-                  color="fff"
-                  size={20}
-                />
-              </div>
-            </form>
+        {location.pathname !== "*" && (
+          <div className={styles.search_form}>
+            <div>
+              <form>
+                <div className={styles.search_container}>
+                  <input
+                    className={styles.search_input}
+                    type="text"
+                    onChange={handleInputChange}
+                    value={search}
+                    placeholder="Buscar produto"
+                  />
+                  <FaSearch
+                    className={styles.search_icon}
+                    onClick={searchProduct}
+                    color="fff"
+                    size={20}
+                  />
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </header>
   );

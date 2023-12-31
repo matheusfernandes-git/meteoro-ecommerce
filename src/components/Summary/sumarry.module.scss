@@ -45,21 +45,30 @@
         background-color: #fff;
 
         .buy_more_button {
-            color: #9353FF;
+            color: #8644f8;
             background: none;
             font-size: 16px;
-            border: 2px solid #9353FF;
+            border: 2px solid #9253ffc0;
             width: 100%;
             padding: 7px;
+
+            &:hover {
+                color: #9353FF;
+                border: 2px solid #843dff;
+            }
         }
 
         .confirm_button {
             font-size: 16px;
             color: #fff;
             border: none;
-            background-color: #9353FF;
+            background-color: #935cf1;
             width: 100%;
             padding: 7px;
+
+            &:hover {
+                background-color: #7731f1ee;
+            }
         }
     }
 

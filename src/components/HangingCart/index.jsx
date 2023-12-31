@@ -10,24 +10,27 @@ const HangingCart = () => {
   const { isCartOpen, handleCart, iconProps, cart } = useContext(CartContext);
 
   return (
-    <div className={isCartOpen ? styles.activeCart : styles.closeCart}>
+    <div className={`${isCartOpen ? styles.active_cart : styles.close_cart}`}>
       <header>
-        <Title classes={styles.cartTitle}>Carrinho</Title>
+        <Title classes={styles.cart_title}>Carrinho</Title>
         <AiOutlineClose
           className={styles.close_hanging_cart}
           {...iconProps}
           onClick={handleCart}
         />
       </header>
-      <main className={styles.container_content}>
+      <main
+        className={`${styles.container_content} ${
+          cart.length >= 4 ? styles.active_scroll : ""
+        } `}
+      >
         {cart.length !== 0 ? (
           <>
-            {" "}
             <ProductCartList />
-            <CartTotal />{" "}
+            <CartTotal />
           </>
         ) : (
-          <p className={styles.emptyCart}>Seu carrinho está vazio! :(</p>
+          <p className={styles.empty_cart}>Seu carrinho está vazio! :(</p>
         )}
       </main>
     </div>
