@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../../Button/index";
-import styles from "./CartTotal.module.scss";
+import styles from './CartTotal.module.scss';
 import { useContext, useEffect } from "react";
 import { CartContext } from "../../../context/CartContext";
 
