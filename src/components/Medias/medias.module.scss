@@ -10,7 +10,7 @@
     .container_facilities{
         display: flex;
         justify-content: center;
-        @media(min-width: 375px) and (max-width: 1200px){
+        @media(max-width: 1200px){
             flex-direction: column;
             width: 100%;
         }

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import HangingCartItem from "../../components/HangingCart/HangingCartItem/index";
 import styles from "./productCartList.module.scss";
 import { CartContext } from "../../context/CartContext";

@@ -61,11 +61,18 @@ header {
 
 .active_scroll {
     overflow-y: auto;
-    max-height: 825px;
+    max-height: 85vh;
 }
 
 @media(max-width: 768px) {
     .active_cart {
         width: 100%;
+    }
+}
+
+@media(max-width: 445px){
+    .container_content{
+        overflow-y: auto;
+        max-height: 80vh;
     }
 }

@@ -19,6 +19,7 @@ const HangingCartItem = ({ id, src, alt, title, price, amount }) => {
         <div className={styles.container_infos}>
           <div className={styles.product_infos}>
             <p>{title}</p>
+
             <Amount className={styles.cart_amount} id={id} amount={amount} />
             <h4>R${price.toFixed(2)}</h4>
           </div>
