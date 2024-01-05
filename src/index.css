@@ -11,6 +11,10 @@ body{
   overflow-x: hidden;
 }
 
+body.cart-open {
+  overflow-y: hidden;
+}
+
 button{
   cursor: pointer;
 }

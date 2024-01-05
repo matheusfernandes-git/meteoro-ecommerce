@@ -70,9 +70,16 @@ header {
     }
 }
 
-@media(max-width: 445px){
-    .container_content{
+@media(max-width: 445px) {
+    .container_content {
         overflow-y: auto;
         max-height: 80vh;
+    }
+}
+
+@media(max-height: 430px) {
+    .container_content {
+        overflow-y: auto;
+        max-height: 60vh;
     }
 }

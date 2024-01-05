@@ -1,13 +1,21 @@
 import styles from "./hangingCart.module.scss";
 import Title from "../../components/Title";
 import { AiOutlineClose } from "react-icons/ai";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import ProductCartList from "../ProductCartList";
 import { CartContext } from "../../context/CartContext";
 import CartTotal from "./CartTotal";
 
 const HangingCart = () => {
   const { isCartOpen, handleCart, iconProps, cart } = useContext(CartContext);
+
+  useEffect(() => {
+    if (isCartOpen) {
+      document.body.classList.add("cart-open");
+    } else {
+      document.body.classList.remove("cart-open");
+    }
+  }, [isCartOpen]);
 
   return (
     <div className={`${isCartOpen ? styles.active_cart : styles.close_cart}`}>
