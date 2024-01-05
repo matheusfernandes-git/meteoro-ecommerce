@@ -27,14 +27,14 @@ const HangingCart = () => {
           onClick={handleCart}
         />
       </header>
-      <main
-        className={`${styles.container_content} ${
-          cart.length >= 4 ? styles.active_scroll : ""
-        } `}
-      >
+      <main className={styles.container_content}>
         {cart.length !== 0 ? (
           <>
-            <ProductCartList />
+            <ProductCartList
+              classes={`${styles.mobile_scroll} ${
+                cart.length >= 4 ? styles.active_scroll : ""
+              } `}
+            />
             <CartTotal />
           </>
         ) : (

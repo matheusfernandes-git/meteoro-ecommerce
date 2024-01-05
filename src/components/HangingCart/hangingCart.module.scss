@@ -50,6 +50,7 @@ header {
     padding: 35px;
     gap: 32px;
     background-color: #343A40;
+    height: 100vh;
 
     .empty_cart {
         color: #fff;
@@ -61,7 +62,19 @@ header {
 
 .active_scroll {
     overflow-y: auto;
-    max-height: 85vh;
+    max-height: 70vh;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(148, 143, 143);
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
 }
 
 @media(max-width: 768px) {
@@ -71,9 +84,9 @@ header {
 }
 
 @media(max-width: 445px) {
-    .container_content {
+    .mobile_scroll {
         overflow-y: auto;
-        max-height: 80vh;
+        max-height: 60vh;
     }
 }
 
