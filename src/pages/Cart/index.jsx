@@ -3,9 +3,9 @@ import cartBanner from "/assets/images/banner-carrinho.png";
 import Title from "../../components/Title";
 import ProductCartList from "../../components/ProductCartList";
 import Summary from "../../components/Summary";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Button from "../../components/Button";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { deleteCartFromLocalStorage } from "../../utils/cart";
 import { CartContext } from "../../context/CartContext";
 
@@ -13,11 +13,20 @@ const Cart = () => {
   const navigate = useNavigate();
   const [completed, setCompleted] = useState(false);
   const { cart, setCart } = useContext(CartContext);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/carrinho") {
+      document.body.classList.remove("cart-open");
+    }
+  }, [location]);
+
   const handleCompletedPurchase = () => {
     setCart([]);
     deleteCartFromLocalStorage();
     setCompleted(!completed);
   };
+
   return (
     <section>
       <div className={styles.cart_banner}>

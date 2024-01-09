@@ -24,7 +24,7 @@ export const CartProvider = ({ children }) => {
     setCart(getCartFromLocalStorage());
   }, []);
 
-  const handleCart = () => setIsCartOpen(!isCartOpen);
+  const handleCartToogle = () => setIsCartOpen(!isCartOpen);
 
   const addProductToCart = (id, amount = 1) => {
     const selectedProduct = productsList.find((product) => product.id === id);
@@ -86,7 +86,8 @@ export const CartProvider = ({ children }) => {
     <CartContext.Provider
       value={{
         isCartOpen,
-        handleCart,
+        setIsCartOpen,
+        handleCartToogle,
         iconProps,
         addProductToCart,
         cart,

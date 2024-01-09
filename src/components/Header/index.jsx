@@ -11,8 +11,8 @@ import { FaSearch } from "react-icons/fa";
 const Header = () => {
   const {
     cart,
-    handleCart,
     iconProps,
+    handleCartToogle,
     quantityCartProduct,
     handleQuantityProductsCart,
   } = useContext(CartContext);
@@ -59,10 +59,13 @@ const Header = () => {
                 {/* <Menu /> */}
                 <Link className={styles.cart_icon}>
                   {cart.length === 0 ? (
-                    <FiShoppingCart {...iconProps} onClick={handleCart} />
+                    <FiShoppingCart {...iconProps} onClick={handleCartToogle} />
                   ) : (
                     <>
-                      <RiShoppingCartFill {...iconProps} onClick={handleCart} />
+                      <RiShoppingCartFill
+                        {...iconProps}
+                        onClick={handleCartToogle}
+                      />
                       <span className={styles.cart_amount}>
                         {quantityCartProduct}
                       </span>

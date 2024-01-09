@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<DefaultPage />}>
-            <Route path="/" element={<Home />} />
+            <Route index element={<Home />} />
             <Route path="/carrinho" element={<Cart />} />
             <Route path="*" element={<NotFound renderCartIcon={false} />} />
           </Route>

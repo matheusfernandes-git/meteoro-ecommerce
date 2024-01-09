@@ -5,12 +5,15 @@ import { useContext, useEffect } from "react";
 import ProductCartList from "../ProductCartList";
 import { CartContext } from "../../context/CartContext";
 import CartTotal from "./CartTotal";
+import { useLocation } from "react-router-dom";
 
 const HangingCart = () => {
-  const { isCartOpen, handleCart, iconProps, cart } = useContext(CartContext);
-
+  const { iconProps, cart, isCartOpen, handleCartToogle } =
+    useContext(CartContext);
+  const location = useLocation();
+  
   useEffect(() => {
-    if (isCartOpen) {
+    if (isCartOpen && location.pathname === "/") {
       document.body.classList.add("cart-open");
     } else {
       document.body.classList.remove("cart-open");
@@ -24,7 +27,7 @@ const HangingCart = () => {
         <AiOutlineClose
           className={styles.close_hanging_cart}
           {...iconProps}
-          onClick={handleCart}
+          onClick={handleCartToogle}
         />
       </header>
       <main className={styles.container_content}>
